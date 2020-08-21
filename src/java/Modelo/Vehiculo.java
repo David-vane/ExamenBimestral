@@ -168,5 +168,17 @@ public class Vehiculo implements Serializable {
     public String toString() {
         return "Modelo.Vehiculo[ iDVehiculo=" + iDVehiculo + " ]";
     }
+
+    public Vehiculo(Integer iDVehiculo, Integer año, Integer numPasajeros, String modelo, String marca, Integer cilindraje, String paisFabrica, String placa, String concensionario) {
+        this.iDVehiculo = iDVehiculo;
+        this.año = año;
+        this.numPasajeros = numPasajeros;
+        this.modelo = modelo;
+        this.marca = marca;
+        this.cilindraje = cilindraje;
+        this.paisFabrica = paisFabrica;
+        this.placa = placa;
+        this.concensionario = concensionario;
+    }
     
 }

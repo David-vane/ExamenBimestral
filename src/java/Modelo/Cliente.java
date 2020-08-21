@@ -146,5 +146,15 @@ public class Cliente implements Serializable {
     public String toString() {
         return "Modelo.Cliente[ cedula=" + cedula + " ]";
     }
+
+    public Cliente(String cedula, String nombre, String apellido, String direccion, Integer edad, String provinciaProced, Integer idVehiculo) {
+        this.cedula = cedula;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.direccion = direccion;
+        this.edad = edad;
+        this.provinciaProced = provinciaProced;
+        this.idVehiculo = idVehiculo;
+    }
     
 }

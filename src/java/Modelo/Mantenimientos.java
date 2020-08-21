@@ -125,5 +125,13 @@ public class Mantenimientos implements Serializable {
     public String toString() {
         return "Modelo.Mantenimientos[ fechaMan=" + fechaMan + " ]";
     }
+
+    public Mantenimientos(Integer idVehiculo, String cedulaCliente, Date fechaMan, String descripcion, Integer kilometrajeVehiculo) {
+        this.idVehiculo = idVehiculo;
+        this.cedulaCliente = cedulaCliente;
+        this.fechaMan = fechaMan;
+        this.descripcion = descripcion;
+        this.kilometrajeVehiculo = kilometrajeVehiculo;
+    }
     
 }
