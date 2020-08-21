@@ -115,7 +115,7 @@ public class VehiculoFacadeREST extends AbstractFacade<Vehiculo> {
     }
     
     @POST
-    @Path("consultarJoyeria")
+    @Path("consultarvehiculosvendidos")
     @Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_JSON})
     public List<Cliente> leerJoyeria(@FormParam("concensionario")String concensionario){
            TypedQuery consulta = getEntityManager().createQuery("SELECT c FROM Cliente c WHERE c.idVehiculo = :idVehiculo", Cliente.class);
