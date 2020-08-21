@@ -106,9 +106,9 @@ public class VehiculoFacadeREST extends AbstractFacade<Vehiculo> {
     }
     
     @POST
-    @Path("consultarJoyeria")
+    @Path("consultaVehiculo")
     @Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_JSON})
-    public List<Vehiculo> leerJoyeria(@FormParam("numPasajeros")int numPasajeros){
+    public List<Vehiculo> leerPasajeros(@FormParam("numPasajeros")int numPasajeros){
            TypedQuery consulta = getEntityManager().createQuery("SELECT v FROM Vehiculo v WHERE v.placa = :placa", Vehiculo.class);
     consulta.setParameter("numPasajeros", numPasajeros);
     return consulta.getResultList();
@@ -117,8 +117,8 @@ public class VehiculoFacadeREST extends AbstractFacade<Vehiculo> {
     @POST
     @Path("consultarJoyeria")
     @Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_JSON})
-    public List<Vehiculo> leerJoyeria(@FormParam("concensionario")String concensionario){
-           TypedQuery consulta = getEntityManager().createQuery("SELECT v FROM Vehiculo v WHERE v.numPasajeros = :numPasajeros", Vehiculo.class);
+    public List<Cliente> leerJoyeria(@FormParam("concensionario")String concensionario){
+           TypedQuery consulta = getEntityManager().createQuery("SELECT c FROM Cliente c WHERE c.idVehiculo = :idVehiculo", Cliente.class);
     consulta.setParameter("concensionario", concensionario);
     return consulta.getResultList();
     }
